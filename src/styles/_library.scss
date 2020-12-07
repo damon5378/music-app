@@ -1,0 +1,71 @@
+*{
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155, 155, 155, .5) transparent;
+}
+*::-webkit-scrollbar{
+    width: 5px;
+}
+*::-webkit-scrollbar-track{
+    background: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    background: linear-gradient(#227ec3, #a7ae39, #539396, #5750c3, #fd2d46);
+    border: transparent;
+    border-radius: 20px;
+}
+.library{
+    background: url('../img/bg_lib.jpg') center center no-repeat;
+    background-size: cover;
+    filter: brightness(.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 100%;
+    box-shadow: 2px 2px 50px rgb(6, 65, 173);
+    overflow-y: scroll;
+}
+
+.library_list{
+    h2{
+        padding-top: 80px;
+        padding-bottom: 53px;
+        text-align: center;
+        color: aqua;
+    }
+}
+
+.library_song{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 2rem 1rem 2rem;
+    cursor: pointer;
+    img{
+        width: 53%;
+        border-radius: 25px;
+        margin-bottom: 15px;
+    }
+    &:hover{
+        background: rgba(20, 0, 0, 0.4);
+        transition: all .3s linear;
+    }
+    h3, h4{
+        color: aqua;
+    }
+}
+
+.song_description{
+    h3{
+        font-size: 1rem;
+    }
+    h4{
+        font-size: .9rem;
+    }
+}
+
+.selected{
+    background: rgba(20, 0, 0, 0.4);
+}
