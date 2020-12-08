@@ -1,0 +1,21 @@
+nav{
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    button{
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        border: 2px solid rgb(65, 65, 65);
+        color: aqua;
+        padding: .7rem;
+        transition: all .3s ease;
+        outline: none;
+        &:hover{
+            background: rgb(54,54,54);
+            color: rgb(236, 182, 182)
+        }
+    }
+}
