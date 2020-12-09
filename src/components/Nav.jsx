@@ -10,6 +10,9 @@ export const Nav = ({ libraryStatus, setLibraryStatus }) => {
   return (
     <nav>
       <h1>Waves</h1>
+      <div className="logo_wrapper">
+        <FontAwesomeIcon icon={faMusic} className="logo" />
+      </div>
       <button onClick={toggleLibraryHandler}>
         Library
         <FontAwesomeIcon icon={faMusic} />

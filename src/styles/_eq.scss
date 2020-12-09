@@ -1,0 +1,68 @@
+$colorlist: #7d30fa, darkblue, blue, #00ccff,  green,lime, yellow, orange, red, darkred;
+@mixin gradient($i) {
+  background: repeating-linear-gradient(
+    0deg,
+    black,
+    black 0.1em,
+    nth($colorlist, $i) 0.2em,
+    nth($colorlist, $i) 1em
+  );
+}
+
+.peak {
+  position: absolute;
+  top: 50%;
+  width: 2em;
+  height: 1em;
+}
+
+@for $i from 1 to 11 {
+  .grad#{$i} {
+    @include gradient($i);
+        box-shadow: 0 0 2em 0 nth($colorlist, $i), 0 0 0.5em 0 black;
+        animation: play #{$i+200+random(750)/2}ms steps(10, end) infinite alternate;
+  }
+ 
+  .p#{$i} {
+    left: 25% + ($i*4); 
+    transform-origin: 0% 0%;
+    transform: rotateX(180deg);
+  }
+
+  .s#{$i} {
+    left: 25% + ($i*4);
+    top: 51%;
+    transform-origin: 0% 50%;
+    transform: rotateX(-180deg);
+  }
+}
+
+/* static */
+body {
+  background: black;
+  margin:0;
+}
+
+.shadow {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 20%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(44, 44, 44, 0.8) 30%,
+    rgba(56, 56, 56, 0.8) 45%,
+    rgba(59, 59, 59, 0.8) 55%,
+    rgba(56, 56, 56, 0.8) 65%,
+    rgba(43, 43, 43, 0.8) 100%,   
+  );
+}
+
+@keyframes play {
+  to {
+    height: 11em;
+  }
+}

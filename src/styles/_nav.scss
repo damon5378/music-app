@@ -19,3 +19,41 @@ nav{
         }
     }
 }
+
+.logo_wrapper{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.logo{
+    // padding: 10px;
+    // font-size: 45px;
+    padding: 15px;
+    font-size: 60px;
+    border: 2px solid aqua;
+    border-radius: 50px;
+    color: aqua;
+}
+
+@media screen and (max-width: 768px) {
+    nav{
+        h1{
+            margin-top: 15px;
+        }
+        button{
+            z-index: 10;
+            position: absolute;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+    }
+    .logo_wrapper{
+        margin-left: 55px;
+        display: flex;
+        align-items: center;
+    }
+    .logo{
+        padding: 10px;
+        font-size: 40px;
+    }
+}

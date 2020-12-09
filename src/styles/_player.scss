@@ -9,14 +9,18 @@
 .time_control{
     width: 50%;
     display: flex;
+    align-items: center;
 
     input{
         width: 100%;
         padding: 1rem 0rem;
         cursor: pointer;
+        -webkit-appearance: none;
+        background: none;
     }
     p{
-        padding: 1rem;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
@@ -36,5 +40,50 @@
     &:hover{
         transform: scale(1.3);
         color: palevioletred;
+    }
+}
+
+input[type="range"]:focus{
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+}
+
+// input[type="range"]::-moz-range-thumb{
+//     -webkit-appearance: none;
+//     background: transparent;
+//     border: none;
+// }
+
+.track{
+    // background: aqua;
+    width: 100%;
+    height: 1rem;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 17px 1px #0ff
+}
+
+.animate_track{
+    background: rgb(204, 204, 204);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0%);
+    pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+    .time_control{
+        width: 90%;
+    }
+    .play_control{
+        width: 60%;
     }
 }
